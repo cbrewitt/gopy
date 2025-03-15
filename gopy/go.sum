@@ -4,6 +4,8 @@ github.com/jptrs93/goutil v0.0.0-20250215164033-0fab76c14367 h1:2rbp03OQexl6uXL3
 github.com/jptrs93/goutil v0.0.0-20250215164033-0fab76c14367/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
 github.com/jptrs93/goutil v0.0.0-20250315044335-e31017e213a7 h1:uDUK3rNfhrYYavZNzDTWiDDxxFjoXJN3JottkfZRGHM=
 github.com/jptrs93/goutil v0.0.0-20250315044335-e31017e213a7/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
+github.com/jptrs93/goutil v0.0.0-20250315050447-7e5aa28f2d5a h1:dkJDFElVGrC3F2MyL9l69jT0SGJuAvE5qhgAcuSMToE=
+github.com/jptrs93/goutil v0.0.0-20250315050447-7e5aa28f2d5a/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd0=
