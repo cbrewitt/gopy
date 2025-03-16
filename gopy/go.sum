@@ -8,6 +8,12 @@ github.com/jptrs93/goutil v0.0.0-20250315050447-7e5aa28f2d5a h1:dkJDFElVGrC3F2My
 github.com/jptrs93/goutil v0.0.0-20250315050447-7e5aa28f2d5a/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
 github.com/jptrs93/goutil v0.0.0-20250315050832-43fc0870f74d h1:2HwD8EpZy5zdLhiMIecwQAW9vm67VcFSiBV+q4MfMtM=
 github.com/jptrs93/goutil v0.0.0-20250315050832-43fc0870f74d/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
+github.com/jptrs93/goutil v0.0.0-20250316081232-9bfa3360ac5c h1:gM7K9H74HWbICOsCAoMPd3HlctARgp7TLtXV45PvyPY=
+github.com/jptrs93/goutil v0.0.0-20250316081232-9bfa3360ac5c/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
+github.com/jptrs93/goutil v0.0.0-20250316081459-01ce91616e2d h1:0TW5WI9KOyUUxWV2joRbSGqTSTmfql1fcTrYRnulHlM=
+github.com/jptrs93/goutil v0.0.0-20250316081459-01ce91616e2d/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
+github.com/jptrs93/goutil v0.0.0-20250316083125-bbf9579d0866 h1:tfGj7cKDtLJybV2vJtSFJf7zW5R4T8tR9azRH6DwWG4=
+github.com/jptrs93/goutil v0.0.0-20250316083125-bbf9579d0866/go.mod h1:GpTSzYWzZhQyAu+G5sS7+yVG42GpWUuhL4yMsre74zk=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd0=
