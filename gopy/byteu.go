@@ -6,6 +6,15 @@ import (
 	"unsafe"
 )
 
+// verify little-endian at startup
+var _ = func() any {
+	var i uint16 = 1
+	if *(*byte)(unsafe.Pointer(&i)) != 1 {
+		panic("gopy only supports little-endian architectures")
+	}
+	return nil
+}()
+
 func int32ToBytes1D(src []int32, dest []byte) {
 	i := 0
 	for _, val := range src {
@@ -199,12 +208,84 @@ func bytesToFloat641D(src []byte, result []float64) {
 	}
 }
 
-// ----  UNSAFE VERSIONS WIP ----
+// ----  UNSAFE VERSIONS ----
 
-func int32ToBytes1DUnsafe(s []int32) []byte {
-	if len(s) == 0 {
-		return []byte{}
+func int16ToBytes1DUnsafe(src []int16, dest []byte) {
+	if len(src) == 0 {
+		return
 	}
-	sliceHeader := unsafe.SliceData(s)
-	return *(*[]byte)(unsafe.Pointer(sliceHeader))
+	bs := unsafe.Slice((*byte)(unsafe.Pointer(&src[0])), len(src)*2)
+	copy(dest, bs)
+}
+
+func int32ToBytes1DUnsafe(src []int32, dest []byte) {
+	if len(src) == 0 {
+		return
+	}
+	bs := unsafe.Slice((*byte)(unsafe.Pointer(&src[0])), len(src)*4)
+	copy(dest, bs)
+}
+
+func int64ToBytes1DUnsafe(src []int64, dest []byte) {
+	if len(src) == 0 {
+		return
+	}
+	bs := unsafe.Slice((*byte)(unsafe.Pointer(&src[0])), len(src)*8)
+	copy(dest, bs)
+}
+
+func float32ToBytes1DUnsafe(src []float32, dest []byte) {
+	if len(src) == 0 {
+		return
+	}
+	bs := unsafe.Slice((*byte)(unsafe.Pointer(&src[0])), len(src)*4)
+	copy(dest, bs)
+}
+
+func float64ToBytes1DUnsafe(src []float64, dest []byte) {
+	if len(src) == 0 {
+		return
+	}
+	bs := unsafe.Slice((*byte)(unsafe.Pointer(&src[0])), len(src)*8)
+	copy(dest, bs)
+}
+
+func bytesToInt161DUnsafe(src []byte, result []int16) {
+	if len(result) == 0 {
+		return
+	}
+	ints := unsafe.Slice((*int16)(unsafe.Pointer(&src[0])), len(result))
+	copy(result, ints)
+}
+
+func bytesToInt321DUnsafe(src []byte, result []int32) {
+	if len(result) == 0 {
+		return
+	}
+	ints := unsafe.Slice((*int32)(unsafe.Pointer(&src[0])), len(result))
+	copy(result, ints)
+}
+
+func bytesToInt641DUnsafe(src []byte, result []int64) {
+	if len(result) == 0 {
+		return
+	}
+	ints := unsafe.Slice((*int64)(unsafe.Pointer(&src[0])), len(result))
+	copy(result, ints)
+}
+
+func bytesToFloat321DUnsafe(src []byte, result []float32) {
+	if len(result) == 0 {
+		return
+	}
+	floats := unsafe.Slice((*float32)(unsafe.Pointer(&src[0])), len(result))
+	copy(result, floats)
+}
+
+func bytesToFloat641DUnsafe(src []byte, result []float64) {
+	if len(result) == 0 {
+		return
+	}
+	floats := unsafe.Slice((*float64)(unsafe.Pointer(&src[0])), len(result))
+	copy(result, floats)
 }

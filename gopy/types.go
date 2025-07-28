@@ -86,7 +86,7 @@ func (arr Float32_Array) MarshalMsgpack() ([]byte, error) {
 	b[0] = 0xC9
 	binary.BigEndian.PutUint32(b[1:5], l)
 	b[5] = byte(ExtFloat32)
-	float32ToBytes1D(arr, b[6:])
+	float32ToBytes1DUnsafe(arr, b[6:])
 	return b, nil
 }
 
@@ -96,7 +96,7 @@ func (arr *Float32_Array) UnmarshalMsgpack(data []byte) error {
 		return err
 	}
 	*arr = make(Float32_Array, len(data)/4)
-	bytesToFloat321D(data, *arr)
+	bytesToFloat321DUnsafe(data, *arr)
 	return nil
 }
 
@@ -183,7 +183,7 @@ func (arr Float64_Array) MarshalMsgpack() ([]byte, error) {
 	b[0] = 0xC9
 	binary.BigEndian.PutUint32(b[1:5], uint32(l))
 	b[5] = byte(ExtFloat64)
-	float64ToBytes1D(arr, b[6:])
+	float64ToBytes1DUnsafe(arr, b[6:])
 	return b, nil
 }
 
@@ -193,7 +193,7 @@ func (arr *Float64_Array) UnmarshalMsgpack(data []byte) error {
 		return err
 	}
 	*arr = make(Float64_Array, len(data)/8)
-	bytesToFloat641D(data, *arr)
+	bytesToFloat641DUnsafe(data, *arr)
 	return nil
 }
 
@@ -280,7 +280,7 @@ func (arr Int16_Array) MarshalMsgpack() ([]byte, error) {
 	b[0] = 0xC9
 	binary.BigEndian.PutUint32(b[1:5], l)
 	b[5] = byte(ExtInt16)
-	int16ToBytes1D(arr, b[6:])
+	int16ToBytes1DUnsafe(arr, b[6:])
 	return b, nil
 }
 
@@ -290,7 +290,7 @@ func (arr *Int16_Array) UnmarshalMsgpack(data []byte) error {
 		return err
 	}
 	*arr = make(Int16_Array, len(data)/2)
-	bytesToInt161D(data, *arr)
+	bytesToInt161DUnsafe(data, *arr)
 	return nil
 }
 
@@ -343,7 +343,7 @@ func (arr Int32_Array) MarshalMsgpack() ([]byte, error) {
 	b[0] = 0xC9
 	binary.BigEndian.PutUint32(b[1:5], l)
 	b[5] = byte(ExtInt32)
-	int32ToBytes1D(arr, b[6:])
+	int32ToBytes1DUnsafe(arr, b[6:])
 	return b, nil
 }
 
@@ -353,7 +353,7 @@ func (arr *Int32_Array) UnmarshalMsgpack(data []byte) error {
 		return err
 	}
 	*arr = make(Int32_Array, len(data)/4)
-	bytesToInt321D(data, *arr)
+	bytesToInt321DUnsafe(data, *arr)
 	return nil
 }
 
@@ -440,7 +440,7 @@ func (arr Int64_Array) MarshalMsgpack() ([]byte, error) {
 	b[0] = 0xC9
 	binary.BigEndian.PutUint32(b[1:5], l)
 	b[5] = byte(ExtInt64)
-	int64ToBytes1D(arr, b[6:])
+	int64ToBytes1DUnsafe(arr, b[6:])
 	return b, nil
 }
 
@@ -450,7 +450,7 @@ func (arr *Int64_Array) UnmarshalMsgpack(data []byte) error {
 		return err
 	}
 	*arr = make(Int64_Array, len(data)/8)
-	bytesToInt641D(data, *arr)
+	bytesToInt641DUnsafe(data, *arr)
 	return nil
 }
 
